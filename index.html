@@ -1,9 +1,579 @@
 <!DOCTYPE html>
-<html>
-    <head>
+<html lang="en">
+  <head>
+    <title>Mehak Preet Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
-    </head>
-    <body>
-        <a>Hello ji 2</a>
-    </body>
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Mehak Preet</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img"><img src="C:\Users\DELL\OneDrive\Desktop\WebDevelopment\My_Portfolio\images\Mehak_small.jpg" alt ="Home"> 
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Mehak Preet</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'Software Engineer',
+						'Data Analyst ',
+						'Product Analyst',
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            <h2> </h2>
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						<!-- <br> -->
+			            <p><a href="https://drive.google.com/file/d/1cc_ni0GYlvS_LaeGHZ19XaPE0PFwVAqo/view" class="btn btn-primary py-3 px-4">Resume</a> 
+							<a href="https://www.linkedin.com/in/mehak18p/" class="btn btn-white btn-outline-white py-3 px-4">Linkedin</a></p>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="" class="img-fluid rounded b-shadow-a" alt="">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<p><span class="title-s">Name: </span> <span>Mehak Preet</span></p>
+										<p><span class="title-s">Institute: </span> <span>Chandigarh College of Engineering and Technology</span></p>
+									  </div>
+									</div>
+								  </div>
+
+								<div class="skill-mf">
+									<p class="title-s">Skills</p>
+									<span>SQL</span> <span class="pull-right">95%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>PYTHON</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Data Visualization</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Statistical Analysis</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Machine Learning</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+									<span>Web Development</span> <span class="pull-right">70%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+									<span>Data Structures and Algorithms</span> <span class="pull-right">75%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								<p>I am a Final year B.E. CSE student enrolled at CCET, Panjab University. As a proactive and motivated student, I I have a genuine passion for technology and innovation, which fuels my drive to excel in both academic pursuits and extracurricular activities. I bring a proactive approach, coupled with strong leadership and excellent communication skills to the table. I have successfully taken on leadership roles in team projects and community initiatives, guiding and inspiring others towards shared goals. Whether collaborating with teams or working independently, I am committed to delivering top-notch results. I am enthusiastic about contributing my skills to projects that foster innovation and create positive change. I am eagerly seeking opportunities to collaborate and make meaningful contributions in the field of computer science and engineering.</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+													 
+
+									<li class="d-flex"><span>Programming & Scripting Languages:</span> <span>C, C++, Python, Java, HTML, CSS, Javascript </span></li>
+									<li class="d-flex"><span>Data Science & Analytics:</span> <span> Power BI, MS Excel, Google sheets</span></li>
+									<li class="d-flex"><span>Tools & Libraries: </span> <span> JIRA, MySQL, Firebase, Flask, Git, Latex, Linux, MATLAB, VS Code, Replit, Google Colab</span></li>
+									<li class="d-flex"><span>Soft Skills: </span> <span> Communication, Collaboration, Problem-solving, Critical Thinking, Time Management, Adaptability, Leadership </span></li>
+									<li class="d-flex"><span> Certifications:  </span> <span> How to create a jira scrum project </span></li>
+									
+									
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p><a href="https://github.com/Mehak-Preet18" class="btn btn-primary py-3 px-3">My Works</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+
+
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+            <p>I am a dedicated final-year B.E. CSE student with extensive experience in machine learning, data science, and a strong foundation in database management. Proficient in data visualization tools like Excel and Python libraries, I excel at deriving meaningful insights from complex datasets.</p>
+          </div>
+        </div>
+
+		<div class="row">
+			<h1 class="big-4">Experience</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+		<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Feb,2024-Present</span>
+						<h2>Department Editor - XRDS </h2>
+						<span class="position"> ACM, Association for Computing Machinery</span>
+						<p class="mt-4">XRDS, formerly Crossroads, is the flagship academic magazine for student members of the Association for Computing Machinery (ACM). Issues focus on computer science topics and are published quarterly in both print and electronic forms.  
+							<ul>
+								<li>Contributed	to	the	articles for the XRDS Crossroads Magazine.</li>
+								<li>Leading	the	Updates	Department of the Magazine.</li>
+								</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">August,2023-Present</span>
+						<h2>Vice Chairperson</h2>
+						<span class="position">CCET ACM-W Student Chapter</span>
+						<p class="mt-4">The CCET ACM-W was founded in October 2021 with an aim to empower women in the feild of computing and increase the global visibility of women in the field of research as well as development. 
+							<ul>
+								<li>Accountable for overseeing diverse club-related responsibilities, including event planning, execution, and supervising tasks performed by multiple teams.</li>
+								<li>Leading a group of 200+ members</li> 
+								
+							</ul>
+						</p>
+					</div>
+
+				</div>
+			</div>
+
+		<br>
+		<br>
+
+		<div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+			<div class="row">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2021-2025</span>
+    					<h2>Bachelor of Engineering - CSE</h2>
+    					<span class="position">CCET, Panjab University</span>
+    					
+    				</div>
+    			</div>
+
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2020-2011</span>
+    					<h2>Higher Secondary School</h2>
+    					<span class="position">DC Montessori School</span>
+    					
+    				</div>
+				</div>
+    		</div>
+
+    	
+    	</div>
+    </section>
+
+   
+
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/Mehak-Preet18/Crop_recommendation_system" class="block-20 zoom-effect"><img src="https://drive.google.com/file/d/1a9Qdd7ZUs6nbPmnurnsH3s_YvX4YZ8oz/view?usp=sharing" alt = "HELLO">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/Mehak-Preet18/Crop_recommendation_system">CROP RECOMMENDATION SYSTEM </a></h3>
+                <p>Developed a system with a user-friendly Flask interface for recommending crops based on soil parameters for Indian Farmers.</p>
+				<p>Achieved 98.48% accuracy, 98.69% precision, 98.64% recall, and 98.65% F1-score.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/Mehak-Preet18/Campus_Placements_Database" class="block-20 zoom-effect"><img src = "My_Portfolio\images\Database.jpg">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href=https://github.com/Mehak-Preet18/Campus_Placements_Database">Campus Placements Database</a></h3>
+                <p>Created a MySQL-based campus placements database.</p>   <p> Facilitating efficient data management for student profiles, company details, job listings, and placement records.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="My_Portfolio\images\PowerBi.jpeg" class="block-20 zoom-effect"><img src  = "My_Portfolio\images\PowerBi.jpeg">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="">Power BI Cricket World Cup Dashboard</a></h3>
+                <p>Used cricket T20 world cup (2022) data to build insights on a best 11 players team. </p><p></p>Used Bright Data for web scraping from espncricinfo website and pandas for data transformation and cleaning.</p>
+				<p></p>Built insightful dashboard with Power BI.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+	<br>
+		
+	  </div>
+    </section>
+
+	<section class="ftco-section" id="publications-section">
+		<div class="container">
+		  <div class="row justify-content-center mb-5 pb-5">
+			<div class="col-md-7 heading-section text-center ftco-animate">
+			  <h1 class="big big-2">Research Publications</h1>
+			  <h2 class="mb-4">Research Publications</h2>
+			  <p>Here are some of my research publications.</p>
+			</div>
+		  </div>
+		  <div class="row d-flex justify-content-center">
+			<div class="col-md-10 ftco-animate">
+			  <ul class="publications-list">
+				<li>
+				  <h3><a href="https://www.sciencedirect.com/science/article/pii/S2772918424000122">Navigating the landscape: Safeguarding privacy and security in the era of ambient intelligence within healthcare settings</a></h3>
+				  <!-- <p>Authors: Author 1, Author 2, Author 3</p> -->
+				  <p>Journal/Conference: Science Direct, 2024</p>
+				  <p>Abstract: Ambient intelligence technologies have the potential to transform healthcare by providing personalized, context-aware, and proactive support for patients and healthcare providers. However, the use of these technologies in healthcare settings raises important privacy and security concerns that must be addressed to ensure patient trust and acceptance. This paper explores the privacy and security considerations related to the utilization of ambient intelligence in healthcare, aiming to address the associated risks and establish a robust security infrastructure. By reviewing the inherent privacy and security risks in healthcare settings employing ambient intelligence, discussing the ethical and legal considerations, and proposing mitigation strategies, the focus is on ensuring patient trust and acceptance.The architecture that is being presented is a comprehensive one with interconnected layers that guarantees data confidentiality, integrity, and privacy in the ambient intelligence healthcare system. This protects sensitive data and maintains its continuous availability. This research helps to establish a safe environment that supports the transformational potential of ambient intelligence in healthcare while putting patient privacy and data protection first by thoroughly addressing privacy and security concerns.</p>
+				</li>
+				<li>
+				  <h3><a href="https://ieeexplore.ieee.org/abstract/document/10444476">
+					Revolutionizing Healthcare Systems: Synergistic Multimodal Ensemble Learning & Knowledge Transfer for Lung Cancer Delineation & Taxonomy</a></h3>
+				  <!-- <p>Authors: Author 1, Author 2, Author 3</p> -->
+				  <p>Journal/Conference: IEEE ICCE 2024</p>
+				  <p>Abstract: Lung cancer presents a substantial global public health concern, underscoring the crucial role of early detection in enhancing patient prognosis and well-being. This paper presents a novel deep ensemble model for the detection and classification of lung cancer, addressing the pressing issue of high incidence and mortality rates associated with the disease, utilizing transfer learning (TL) with Convolutional Neural Networks (CNNs) and integrating modern technology in the form of fitness trackers. The ensemble combines CNNs namely VGG16, VGG19, InceptionV3, Xception, and DenseNet201 through weighted voting, achieving a remarkable 97.2% accuracy. This innovation extends beyond image analysis by integrating fitness trackers that continuously monitor health metrics, enhancing patient engagement and proactive health management. The framework’s capacity to transform both the diagnosis and treatment of lung cancer is highlighted by its heightened precision and extensive patient monitoring capabilities, offering the prospect of better outcomes and more efficient healthcare delivery.</p>
+				</li>
+				<li>
+				  <h3><a href="https://link.springer.com/chapter/10.1007/978-981-97-3292-0_25">OPTUNA—Driven Soft Computing Approach for Early Diagnosis of Diabetes Mellitus Using ANN</a></h3>
+				  <!-- <p>Authors: Author 1, Author 2, Author 3</p> -->
+				  <p>Journal/Conference: (SocProS) International conference on soft computing for problem-solving</p>
+				  <p>Abstract: Diabetes is a severe disease characterized by elevated blood glucose levels. Early identification and prediction of diabetes are crucial for effective management. Considering that diabetes affected approximately 422 million people globally in 2018, the World Health Organisation (WHO) has reported, that the significance of accurate classification and prediction methods cannot be overstated. This research contributes in enhancing the overall accuracy of diabetes prediction. The proposed work introduces an enhanced method for diabetes classification and prediction by integrating artificial neural networks (ANNs) into the OPTUNA hyperparameter optimization framework. Soft computing techniques, including Recursive feature elimination with cross-validation (RFECV) and principal component analysis (PCA), are employed to improve performance and handle uncertain and imprecise data. Outcomes of experiments on the Pima Indian Diabetes dataset demonstrate superior accuracy compared to conventional methods. The proposed approach offers a powerful decision support system for healthcare practitioners, aiding in early diagnosis and effective management of diabetes. The proposed methodology achieved high accuracy rates of 98.78% for the trained data and 98.44% for the test data, demonstrating its effectiveness by combining the strengths of ANNs and soft computing.</p>
+				</li>
+			  </ul>
+			</div>
+		  </div>
+		</div>
+	  </section>
+
+	
+
+
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Below are the details to reach out to me!</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p>Chandigarh, India</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="tel://0101010101"> 7889198272</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="mehak18p@gmail.com">mehak18p@gmail.com</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Download Resume</h3>
+	            <p><a href="https://drive.google.com/file/d/1cc_ni0GYlvS_LaeGHZ19XaPE0PFwVAqo/view">resume link</a></p>
+	          </div>
+          </div>
+
+		  <div class="container">
+			<br>
+			<br>
+			
+				<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate normal-txt">Find me on  </li>
+					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/mehak18p"><span class="icon-linkedin"></span></a></li>  
+					  <li class="ftco-animate"><a href="https://www.instagram.com/mehak18p"><span class="icon-instagram"></span></a></li>
+					</ul>
+				<br>
+		   </div>
+   </div>
+ </section>
+
+
+ 
+	
+    <footer class="ftco-footer ftco-section">
+		
+	  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
 </html>
